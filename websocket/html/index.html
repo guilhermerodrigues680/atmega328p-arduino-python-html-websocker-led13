@@ -1,0 +1,80 @@
+<!-- 
+    index.html
+    Projeto: Arduino | Python | HTML | Websocket
+    Criado por Guilherme Rodrigues em 28/03/2020
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino | Python | HTML | Websocket</title>
+    
+    <!-- STYLE -->
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            margin-top: 100px;
+            text-align: center;
+        }
+        #span-status-led {
+            width: 100px;
+            display: inline-block;
+            text-align: center;
+        }
+        #circle {
+            height: 20px;
+            width: 20px;
+            background-color: silver;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #div-erro {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monitoramento em tempo real do Led 13 do Arduino</h1>
+    <h2>Estado do Led: <span id="span-status-led">?</span> <span id="circle"></span> </h2>
+
+    <div id="div-erro">Conectando...</div>
+
+    <!-- FRAMEWORKS -->
+    <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <!-- SCRIPTS JS -->
+    <script>
+        var ws = new WebSocket("ws://127.0.0.1:6789/");
+        
+        ws.onmessage = function (event) { // Evento quando o websocket recebe uma mensagem
+            let data = JSON.parse(event.data);
+
+            if (data.status_led == 1) {
+                $('#span-status-led').text("Aceso");
+                $("#circle").css("background-color", "orange");
+            } else {
+                $('#span-status-led').text("Apagado");
+                $("#circle").css("background-color", "silver");
+            }
+        };
+
+        ws.onopen = function (event) { // Evento quando a conexao for estabelecida
+            $('#div-erro').text("Conectado!");
+            $("#div-erro").css("color", "lightgreen");
+        }
+
+        ws.onclose = function (event) { // Evento quando a conexao fechar
+            $('#div-erro').text("Sem conexão...");
+            $("#div-erro").css("color", "red");
+        }
+    </script>
+</body>
+</html>
