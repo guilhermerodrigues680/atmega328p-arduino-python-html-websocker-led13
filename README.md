@@ -1,3 +1,35 @@
+<h1 align="center">
+  <br>
+  <a><img src="https://github.com/guilhermerodrigues680/arduino-python-html-websocker-led13/blob/master/docs/images/atmega328p-site-microchip.png" alt="ATmega 328P" height="100" width="208"></a>&nbsp;
+  <a><img src="https://github.com/guilhermerodrigues680/arduino-python-html-websocker-led13/blob/master/docs/images/ANSI_logo.svg" alt="ANSI Logo" height="100" width="208"></a>&nbsp;
+  <a><img src="https://github.com/guilhermerodrigues680/arduino-python-html-websocker-led13/blob/master/docs/images/JQuery-Logo.svg" alt="JQuery Logo" height="100" width="208"></a>
+  <br>
+  ATmega328P , Arduino , Python , HTML , Websocker , Led13
+  <br>
+</h1>
+
+<h2 align="center">Monitoramento do ATmega328P/Arduino via Página Web usando Websockets no Python 3</h2>
+
+<p align="center">
+    <a alt="ANSI C"><img src="https://img.shields.io/badge/C-ANSI-orange.svg" /></a>
+    <a alt="Python 3"><img src="https://img.shields.io/badge/Python-3-brightgreen.svg" /></a>
+    <a alt="HTML 5"><img src="https://img.shields.io/badge/HTML-5-yellowgreen.svg" /></a>
+    <a alt="CSS 3"><img src="https://img.shields.io/badge/CSS-3-orange.svg" /></a>
+    <a alt="JQuery v3.4.1"><img src="https://img.shields.io/badge/JQuery-v3.4.1-brightgreen.svg" /></a>
+    <a alt="License MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
+</p>
+
+### Tabela de Conteúdo ###
+1. [Sobre](#Sobre)
+2. [Instruções](#Instruções)
+3. [Fluxo da aplicação](#Fluxo-da-aplicação)
+4. [Executando a aplicação](#Executando-a-aplicação)
+5. [Capturas de tela | GIFs](#capturas-de-tela--gifs)
+6. [Referências Consultadas](#referências-consultadas)
+7. [Contributor](#Contributor)
+8. [License](#License)
+
+
 # Monitoramento do ATmega328P/Arduino via Página Web usando Websockets no Python 3
 
 ## Sobre 
@@ -93,3 +125,9 @@ python3 main.py
 [JSON - JavaScript | MDN](https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript/Objetos/JSON)  
 [jQuery](https://jquery.com/)  
 
+
+### Contributor ###
+[LinkedIn: Guilherme Rodrigues](https://www.linkedin.com/in/guilherme-r-54380b106/)
+
+### License ###
+This project is licensed under the terms of the MIT license.
